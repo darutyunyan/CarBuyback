@@ -1,0 +1,30 @@
+.footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+    color: white;
+    background-color: #343a40;
+}
+
+.copyright{
+    font-size: small;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.social {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social a {
+    font-size: 30px;
+    color: white;
+    padding: 0px 10px;
+}
+
+.social a:hover {
+    text-decoration: none;
+    color: #ccc2c2;
+} 
