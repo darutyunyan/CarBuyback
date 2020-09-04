@@ -1,21 +1,18 @@
 .footer {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
+
     color: white;
     background-color: #343a40;
 }
 
 .copyright{
     font-size: small;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .social {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .social a {
