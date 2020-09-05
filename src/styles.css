@@ -15,6 +15,11 @@ h2 {
 }
 
 /* Overrid bootstrap */
+
+.jumbotron {
+    margin: 30px 0;
+}
+
 @media (min-width: 576px) {
     .jumbotron {
         padding: 2rem 2rem;

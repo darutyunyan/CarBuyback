@@ -11,6 +11,7 @@ import { ContactComponent } from './shared/contact/contact.component';
 import { QuestionsComponent } from './shared/questions/questions.component';
 import { ServicesComponent } from './shared/services/services.component';
 import { AboutComponent } from './shared/about/about.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const mapConfig: IConfig = {
@@ -27,7 +28,8 @@ const mapConfig: IConfig = {
     ContactComponent,
     QuestionsComponent,
     ServicesComponent,
-    AboutComponent
+    AboutComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
