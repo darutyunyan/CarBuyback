@@ -5,12 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { MenuComponent } from './shared/menu/menu.component';
 import { CarouselComponent } from './shared/carousel/carousel.component';
-
 import { AngularYandexMapsModule, IConfig,  } from 'angular8-yandex-maps';
 import { ContactComponent } from './shared/contact/contact.component';
 import { QuestionsComponent } from './shared/questions/questions.component';
+import { ServicesComponent } from './shared/services/services.component';
+import { AboutComponent } from './shared/about/about.component';
 
 
 const mapConfig: IConfig = {
@@ -23,10 +23,11 @@ const mapConfig: IConfig = {
     AppComponent,
     MainLayoutComponent,
     FooterComponent,
-    MenuComponent,
     CarouselComponent,
     ContactComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    ServicesComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
