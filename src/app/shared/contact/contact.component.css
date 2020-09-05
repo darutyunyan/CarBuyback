@@ -1,0 +1,17 @@
+.yandex-container {
+    width: 100%;
+    height: 250px;
+  } 
+
+  .social {
+    padding-top: 50px;
+}
+
+.social a {
+    font-size: 50px;
+    padding: 0px 10px;
+}
+
+.social a:hover {
+    text-decoration: none;
+} 
