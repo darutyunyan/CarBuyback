@@ -13,3 +13,12 @@
 .navbar-brand {
     font-weight: 700;
 }
+
+
+.arrow-top{
+    bottom: 15px;
+    left: 15px;
+    position: fixed;
+    color: #007bff;
+    font-size: 60px;
+}
