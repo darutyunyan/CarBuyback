@@ -14,9 +14,9 @@ export class MainLayoutComponent implements OnInit {
   @ViewChild('services', { static: false }) services: ElementRef;
   @ViewChild('questions', { static: false }) questions: ElementRef;
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll')
   onScrollEvent() {
-    if (window.pageYOffset > 1000) {
+    if (window.pageYOffset > 500) {
       this.isShowArrowUp = true;
     } else {
       this.isShowArrowUp = false;
