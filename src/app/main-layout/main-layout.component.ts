@@ -9,10 +9,10 @@ export class MainLayoutComponent implements OnInit {
 
   public isShowArrowUp = false;
 
-  @ViewChild('aboutCompany', { static: false }) about: ElementRef;
-  @ViewChild('contantUs', { static: false }) contant: ElementRef;
-  @ViewChild('services', { static: false }) services: ElementRef;
-  @ViewChild('questions', { static: false }) questions: ElementRef;
+  @ViewChild('aboutCompany') about: ElementRef;
+  @ViewChild('contantUs') contant: ElementRef;
+  @ViewChild('services') services: ElementRef;
+  @ViewChild('questions') questions: ElementRef;
 
   @HostListener('window:scroll')
   onScrollEvent() {
