@@ -1,0 +1,20 @@
+.mt-56 {
+    margin-top: 56px;
+}
+
+.jumbotron {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.display-4 {
+    font-weight: 600;
+}
+
+.resize-none {
+    resize: none;
+}
+
+.font-size-25 {
+    font-size: 25px;
+}

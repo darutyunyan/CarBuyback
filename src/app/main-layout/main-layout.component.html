@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand d-block d-lg-none" href="#topMobileMenu" (click)="scrollToTop()"><i class="fa fa-car"
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand d-block d-md-none" href="#topMobileMenu" (click)="scrollToTop()"><i class="fa fa-car"
       aria-hidden="true"></i> Автовыкуп</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08"
     aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,10 +8,8 @@
 
   <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
     <ul class="navbar-nav">
-      <li class="nav-item active d-none d-lg-block">
-        <a class="nav-link" href="#topMenu" (click)="scrollToTop()"><i class="fa fa-car" aria-hidden="true"></i>
-          Автовыкуп</a>
-      </li>
+      <a class="navbar-brand d-none d-md-block" href="#topMenu" (click)="scrollToTop()"><i class="fa fa-car"
+        aria-hidden="true"></i> Автовыкуп</a>
       <li class="nav-item">
         <a class="nav-link" href="#about" (click)="scrollTo('about')">О КОМПАНИИ</a>
       </li>
@@ -28,7 +26,7 @@
   </div>
 </nav>
 
-<app-carousel></app-carousel>
+<app-header></app-header>
 <div #aboutCompany></div>
 <br>
 <app-about></app-about>
@@ -44,7 +42,7 @@
 <div #questions></div>
 <br>
 <app-questions></app-questions>
-
+<br>
 <app-footer></app-footer>
 
 <i *ngIf="isShowArrowUp" class="fa fa-arrow-circle-up arrow-top d-none d-lg-block" aria-hidden="true"

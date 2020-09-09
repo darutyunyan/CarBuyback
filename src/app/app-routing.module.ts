@@ -6,10 +6,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
-    path: '', component: MainLayoutComponent, children: [
-      { path: '', redirectTo: '/', pathMatch: 'full' }
-    ]
+    path: '', component: MainLayoutComponent
   },
+
   {
     path: '**', component: NotFoundComponent
   }];

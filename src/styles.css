@@ -6,18 +6,32 @@ body {
 
 /* Common styles */
 
-.mt-15 {
-    margin-top: 15px;
+.mt-25 {
+    margin-top: 25px;
+}
+
+.mr-0 {
+    margin-right: 0;
 }
 
 h2 {
     margin-bottom: 1rem;
 }
 
+ul{
+    margin-left: 10px;
+}
+
+.fa-custom {
+    color: #007bff;
+    font-size: 15px;
+}
+
 /* Overrid bootstrap */
 
 .jumbotron {
     margin: 30px 0;
+    box-shadow: 0 1px 6px rgba(0,0,0,.12), 0 1px 4px rgba(0,0,0,.24);
 }
 
 @media (min-width: 576px) {
@@ -38,4 +52,10 @@ h2 {
 
 .fa {
     cursor: pointer;
+}
+
+.display-5 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
 }
