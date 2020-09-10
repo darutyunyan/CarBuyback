@@ -30,6 +30,7 @@ export class HeaderComponent implements OnInit {
 
   submit() {
     if (this.form.invalid) {
+      this.form.markAllAsTouched();
       return;
     }
 

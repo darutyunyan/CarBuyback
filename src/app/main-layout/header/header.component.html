@@ -16,16 +16,10 @@
                             <div class="form-group">
                                 <input id="name" class="form-control" placeholder="Ваше имя" type="text"
                                     formControlName="name">
-                                <div *ngIf="form.get('name').touched && form.get('name').invalid" class="validation">
-                                    <small *ngIf="form.get('name').errors.required">Введите имя</small>
-                                </div>
                             </div>
                             <div class="form-group">
                                 <input id="phone" class="form-control" placeholder="Ваш телефон" type="text"
                                     formControlName="phone">
-                                <div *ngIf="form.get('phone').touched && form.get('phone').invalid" class="validation">
-                                    <small *ngIf="form.get('phone').errors.required">Введите номер телефона</small>
-                                </div>
                             </div>
 
                             <div class="form-group">

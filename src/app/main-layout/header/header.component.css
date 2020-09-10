@@ -20,3 +20,7 @@
 .font-size-25 {
     font-size: 25px;
 }
+
+.form-control.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
