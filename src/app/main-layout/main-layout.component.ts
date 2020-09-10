@@ -40,4 +40,12 @@ export class MainLayoutComponent implements OnInit {
       behavior: 'smooth'
     });
   }
+
+  toServices(name: string){
+    this.scrollTo(name);
+  }
+
+  toContactUs(name: string){
+    this.scrollTo(name);
+  }
 }

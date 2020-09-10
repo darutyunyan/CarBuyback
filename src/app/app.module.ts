@@ -1,18 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
-import { FooterComponent } from './shared/footer/footer.component';
+import { FooterComponent } from './main-layout/footer/footer.component';
 import { AngularYandexMapsModule, IConfig,  } from 'angular8-yandex-maps';
-import { ContactComponent } from './shared/contact/contact.component';
-import { QuestionsComponent } from './shared/questions/questions.component';
-import { ServicesComponent } from './shared/services/services.component';
-import { AboutComponent } from './shared/about/about.component';
+import { ContactComponent } from './main-layout/contact/contact.component';
+import { QuestionsComponent } from './main-layout/questions/questions.component';
+import { ServicesComponent } from './main-layout/services/services.component';
+import { AboutComponent } from './main-layout/about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { FeedbackComponent } from './shared/feedback/feedback.component';
+import { HeaderComponent } from './main-layout/header/header.component';
 
 
 const mapConfig: IConfig = {
@@ -30,15 +30,15 @@ const mapConfig: IConfig = {
     ServicesComponent,
     AboutComponent,
     NotFoundComponent,
-    HeaderComponent,
-    FeedbackComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularYandexMapsModule.forRoot(mapConfig),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

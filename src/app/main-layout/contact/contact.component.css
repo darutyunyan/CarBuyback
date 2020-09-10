@@ -15,3 +15,15 @@
 .social a:hover {
     text-decoration: none;
 } 
+
+.lead span {
+    cursor: pointer;
+}
+
+.lead span i {
+    font-size: 25px;
+    color:#007bff;
+}
+.qweqwe {
+    color: #007bff;
+}

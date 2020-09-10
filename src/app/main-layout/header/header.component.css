@@ -7,8 +7,10 @@
     border-top-right-radius: 0;
 }
 
-.display-4 {
-    font-weight: 600;
+@media (min-width: 920px) {
+    .display-4 {
+        font-size: 4rem;
+    }    
 }
 
 .resize-none {

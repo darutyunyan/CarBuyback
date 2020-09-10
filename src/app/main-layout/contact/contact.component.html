@@ -12,15 +12,15 @@
                 <h2><span class="badge badge-primary text-wrapy">АДРЕСА ОФИСОВ</span></h2>
 
                 <p class="lead">
-                    г. Воронеж, пр. Труда, д. 48<br>
-                    г. Ставрополь, д. 15/1, офис 603
+                    <span [ngClass]="{qweqwe: isFirstCityActive}" (click)="setCity(true)">г. Воронеж, пр. Труда, д.48  <i *ngIf="isFirstCityActive" class="fa fa-check-circle" aria-hidden="true"></i></span><br>
+                    <span [ngClass]="{qweqwe: !isFirstCityActive}" (click)="setCity(false)">г. Ставрополь, д. 15/1, офис 603 <i *ngIf="!isFirstCityActive" class="fa fa-check-circle" aria-hidden="true"></i></span>
                 </p>
             </div>
             <div class="col-md-6 col-lg-8">
                 <h2><span class="badge badge-primary text-wrapy">СХЕМА ПРОЕЗДА</span></h2>
                 <div class="yandex-container mt-25">
-                    <ya-map [center]="[51.677080, 39.170751]" [zoom]="15">
-                        <ya-placemark [geometry]="[51.677080, 39.170751]"></ya-placemark>
+                    <ya-map [center]="[currentCity.lat, currentCity.lng]" [zoom]="15">
+                        <ya-placemark [geometry]="[currentCity.lat, currentCity.lng]"></ya-placemark>
                     </ya-map>
                 </div>
             </div>
