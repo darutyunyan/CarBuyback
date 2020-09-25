@@ -14,6 +14,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HeaderComponent } from './main-layout/header/header.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { MailService } from './shared/mail.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [MailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
