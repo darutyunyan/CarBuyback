@@ -3,14 +3,15 @@
     padding-right: 40px;
 }
 
-.social a:hover {
-    text-decoration: none;
-} 
-
-.lead a:hover {
-    text-decoration: none;
-}
-
 .fa {
     font-size: 30px;
+}
+
+a  {
+color: #343a40;
+}
+
+a:hover {
+    color: #007bff;
+    text-decoration: none;
 }
