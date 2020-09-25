@@ -1,9 +1,10 @@
 using System.Threading.Tasks;
+using TeacherService.Dto;
 
 namespace TeacherService.Models.Services.Mail
 {
     public interface IMailService
     {
-        Task SendEmail(string name, string phone, string message);
+        Task SendEmail(FeedbackRequest request);
     }
 }

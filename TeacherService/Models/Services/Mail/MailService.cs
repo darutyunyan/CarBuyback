@@ -1,6 +1,7 @@
 using MimeKit;
 using MailKit.Net.Smtp;
 using System.Threading.Tasks;
+using TeacherService.Dto;
 
 namespace TeacherService.Models.Services.Mail
 {
@@ -11,7 +12,7 @@ namespace TeacherService.Models.Services.Mail
             _settings = settings;
         }
 
-        public async Task SendEmail(string name, string phone, string message)
+        public async Task SendEmail(FeedbackRequest request)
         {
             var emailMessage = new MimeMessage();
 
@@ -20,7 +21,7 @@ namespace TeacherService.Models.Services.Mail
             emailMessage.Subject = NEW_CLIENT;
             emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
             {
-                Text = string.Format(MESSAGE_FORMAT, name, phone, message)
+                Text = string.Format(MESSAGE_FORMAT, request.Name, request.Phone, request.City, request.Message)
             };
 
             using (var client = new SmtpClient())
@@ -37,7 +38,7 @@ namespace TeacherService.Models.Services.Mail
 
         private const string NEW_CLIENT = "Новая заявка на звонок!";
 
-        private const string MESSAGE_FORMAT = "<p>Имя: {0}<br>Телефон: {1}</p><p>Сообщение: {2}</p>";
+        private const string MESSAGE_FORMAT = "<p>Имя: {0}<br>Телефон: {1}<br>Город: {2}</p><p>Сообщение: {3}</p>";
 
         #endregion
 

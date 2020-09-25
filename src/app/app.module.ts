@@ -12,6 +12,8 @@ import { ServicesComponent } from './main-layout/services/services.component';
 import { AboutComponent } from './main-layout/about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HeaderComponent } from './main-layout/header/header.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { HeaderComponent } from './main-layout/header/header.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,6 +10,9 @@ namespace TeacherService.Dto
         [Required]
         public string Phone { get; set; }
 
+        [Required]
+        public string City { get; set; }
+
         public string Message { get; set; }
     }
 }

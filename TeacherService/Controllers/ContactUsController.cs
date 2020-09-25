@@ -23,7 +23,7 @@ namespace TeacherService.Controllers
 
             try
             {
-                await _mailServ.SendEmail(request.Name, request.Phone, request.Message);
+                await _mailServ.SendEmail(request);
             }
             catch (Exception ex)
             {

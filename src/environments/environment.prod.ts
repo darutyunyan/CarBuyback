@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  teacherWebServiceUrl: ' '
+  teacherWebServiceUrl: 'https://service.autovikuprus.ru'
 };
