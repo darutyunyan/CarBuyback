@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
     this.form = new FormGroup({
       name: new FormControl(null, [Validators.required]),
       phone: new FormControl(null, [Validators.required]),
+      city: new FormControl('Ставрополь', [Validators.required]),
       message: new FormControl(null)
     });
   }
@@ -39,13 +40,14 @@ export class HeaderComponent implements OnInit {
     const request = {
       name: this.form.value.name,
       phone: this.form.value.phone,
+      city: this.form.value.city,
       message: this.form.value.message
     };
 
     this.mailServ.feedback(request).subscribe((res: any) => {
       if (res.serviceError == null) {
         alert('Ваше сообщение успешно отправлено!');
-        this.form.reset();
+        this.form.reset({ city: 'Ставрополь' });
       } else {
         alert('Произошла ошибка, попробуйте позже!');
       }

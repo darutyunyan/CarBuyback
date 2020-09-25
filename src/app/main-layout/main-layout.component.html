@@ -1,17 +1,17 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand d-block d-md-none" href="#header" (click)="scrollToTop()"><i class="fa fa-car"
-      aria-hidden="true"></i> Автовыкуп</a>
+      aria-hidden="true"></i></a>
+  <a class="navbar-brand d-block d-md-none" href="tel:+79854238284"><i class="fa fa-mobile" aria-hidden="true"></i> +7 800 205 205 9</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08"
     aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+  <div class="collapse navbar-collapse justify-content-between" id="navbarsExample08">
+    <a class="navbar-brand d-none d-md-block" href="#header" (click)="scrollToTop()">АВТОВЫКУП</a>  
     <ul class="navbar-nav">
-      <a class="navbar-brand d-none d-md-block" href="#header" (click)="scrollToTop()"><i class="fa fa-car"
-        aria-hidden="true"></i> Автовыкуп</a>
       <li class="nav-item">
-        <a class="nav-link" href="#about" (click)="scrollTo('about')">О КОМПАНИИ</a>
+        <a class="nav-link" href="#about" (click)="scrollTo('about')">О НАС</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#contant" (click)="scrollTo('contant')">КОНТАКТЫ</a>
@@ -23,6 +23,7 @@
         <a class="nav-link" href="#questions" (click)="scrollTo('questions')">ВОПРОСЫ</a>
       </li>
     </ul>
+    <a class="navbar-brand d-none d-md-block" href="tel:+79854238284"><i class="fa fa-mobile" aria-hidden="true"></i> +7 800 205 205 9</a>
   </div>
 </nav>
 

@@ -3,36 +3,20 @@
         <h2 class="display-4">КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
         <div class="row">
             <div class="col-md-6 col-lg-4">
-                <h2><span class="badge badge-primary text-wrapy">ТЕЛЕФОНЫ И ПОЧТА</span></h2>
-                <p class="lead">
-                    г. Воронеж, +7(985)433-8284<br>
-                    г. Ставрополь, +7(985)421-8284<br>
-                    Почта: info@gtcarter.ru
+                <h2><span class="badge badge-primary text-wrapy">ТЕЛЕФОН И ПОЧТА</span></h2>
+                <p class="lead mt-4">
+                    <a href="tel:+79854238284"><i class="fa fa-mobile" aria-hidden="true"></i> +7(985)433-8284</a>
                 </p>
-                <h2><span class="badge badge-primary text-wrapy">АДРЕСА ОФИСОВ</span></h2>
-
                 <p class="lead">
-                    <span [ngClass]="{qweqwe: isFirstCityActive}" (click)="setCity(true)">г. Воронеж, пр. Труда, д.48  <i *ngIf="isFirstCityActive" class="fa fa-check-circle" aria-hidden="true"></i></span><br>
-                    <span [ngClass]="{qweqwe: !isFirstCityActive}" (click)="setCity(false)">г. Ставрополь, д. 15/1, офис 603 <i *ngIf="!isFirstCityActive" class="fa fa-check-circle" aria-hidden="true"></i></span>
+                    <a href="mailto:spichenkova1996@mail.ru"><i class="fa fa-envelope-o" aria-hidden="true"></i> info@gtcarter.ru</a>
                 </p>
             </div>
             <div class="col-md-6 col-lg-8">
-                <h2><span class="badge badge-primary text-wrapy">СХЕМА ПРОЕЗДА</span></h2>
-                <div class="yandex-container mt-25">
-                    <ya-map [center]="[currentCity.lat, currentCity.lng]" [zoom]="15">
-                        <ya-placemark [geometry]="[currentCity.lat, currentCity.lng]"></ya-placemark>
-                    </ya-map>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="text-center social">
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-vk"></a>
-                    <a href="#" class="fa fa-skype"></a>
+                <h2><span class="badge badge-primary text-wrapy">СОЦИАЛЬНЫЕ СЕТИ</span></h2>
+                <div class="social mt-4">
+                    <a href="https://instagram.com/autovikuprus.ru?igshid=1ijtabxir4uxs" class="fa fa-instagram"></a>
                     <a href="#" class="fa fa-whatsapp"></a>
-                    <a href="#" class="fa fa-phone"></a>
+                    <a href="#" class="fa fa-telegram"></a>
                 </div>
             </div>
         </div>
