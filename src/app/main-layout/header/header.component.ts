@@ -12,7 +12,8 @@ export class HeaderComponent implements OnInit {
   public moveToContactUs: EventEmitter<string> = new EventEmitter<string>(true);
 
   public form: FormGroup;
-  submitted = false;
+  public submitted = false;
+  public isShowLoader = false;
 
   constructor(private mailServ: MailService) { }
 
@@ -36,6 +37,7 @@ export class HeaderComponent implements OnInit {
     }
 
     this.submitted = true;
+    this.isShowLoader = true;
 
     const request = {
       name: this.form.value.name,
@@ -52,9 +54,11 @@ export class HeaderComponent implements OnInit {
         alert('Произошла ошибка, попробуйте позже!');
       }
       this.submitted = false;
+      this.isShowLoader = false;
     }, () => {
       alert('Произошла ошибка, попробуйте позже!');
       this.submitted = false;
+      this.isShowLoader = false;
     });
   }
 }
