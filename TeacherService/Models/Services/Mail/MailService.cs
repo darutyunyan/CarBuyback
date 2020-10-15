@@ -21,7 +21,15 @@ namespace TeacherService.Models.Services.Mail
             emailMessage.Subject = NEW_CLIENT;
             emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
             {
-                Text = string.Format(MESSAGE_FORMAT, request.Name, request.Phone, request.City, request.Message)
+                Text = string.Format(MESSAGE_FORMAT,
+                    request.Name,
+                    request.Phone,
+                    request.City,
+                    request.CarModel,
+                    request.Model,
+                    request.Year,
+                    request.Mileage,
+                    request.Message)
             };
 
             using (var client = new SmtpClient())
@@ -38,7 +46,7 @@ namespace TeacherService.Models.Services.Mail
 
         private const string NEW_CLIENT = "Новая заявка на звонок!";
 
-        private const string MESSAGE_FORMAT = "<p>Имя: {0}<br>Телефон: {1}<br>Город: {2}</p><p>Сообщение: {3}</p>";
+        private const string MESSAGE_FORMAT = "<p>Имя: {0}<br>Телефон: {1}<br>Город: {2}<br>Марка автомобиля: {3}<br>Модель: {4}<br>Год выпуска: {5}<br>Пробег: {6}</p><p>Сообщение: {7}</p>";
 
         #endregion
 

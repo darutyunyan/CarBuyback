@@ -22,6 +22,10 @@ export class HeaderComponent implements OnInit {
       name: new FormControl(null, [Validators.required]),
       phone: new FormControl(null, [Validators.required]),
       city: new FormControl('Ставрополь', [Validators.required]),
+      carModel: new FormControl(null),
+      model: new FormControl(null),
+      year: new FormControl(null),
+      mileage: new FormControl(null),
       message: new FormControl(null)
     });
   }
@@ -43,6 +47,10 @@ export class HeaderComponent implements OnInit {
       name: this.form.value.name,
       phone: this.form.value.phone,
       city: this.form.value.city,
+      carModel: this.form.value.carModel,
+      model: this.form.value.model,
+      year: this.form.value.year,
+      mileage: this.form.value.mileage,
       message: this.form.value.message
     };
 
