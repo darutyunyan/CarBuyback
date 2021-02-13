@@ -15,6 +15,7 @@ import { HeaderComponent } from './main-layout/header/header.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { MailService } from './shared/mail.service';
+import { ReviewsComponent } from './main-layout/reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MailService } from './shared/mail.service';
     ServicesComponent,
     AboutComponent,
     NotFoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,

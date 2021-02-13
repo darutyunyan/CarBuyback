@@ -3,8 +3,10 @@ using TeacherService.Dto;
 
 namespace TeacherService.Models.Services.Mail
 {
-    public interface IMailService
-    {
-        Task SendEmail(FeedbackRequest request);
-    }
+	public interface IMailService
+	{
+		Task SendEmail(FeedbackRequest request);
+
+		Task SendShortEmail(ShortFeedbackRequest request);
+	}
 }

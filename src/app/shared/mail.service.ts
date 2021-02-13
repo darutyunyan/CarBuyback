@@ -11,4 +11,8 @@ export class MailService {
     return this.http.post(`${environment.teacherWebServiceUrl}/ContactUs/Feedback`, request);
   }
 
+  shortFeedback(request) {
+    return this.http.post(`${environment.teacherWebServiceUrl}/ContactUs/ShortFeedback`, request);
+  }
+
 }

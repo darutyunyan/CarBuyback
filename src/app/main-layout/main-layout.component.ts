@@ -13,6 +13,7 @@ export class MainLayoutComponent implements OnInit {
   @ViewChild('contantUs') contant: ElementRef;
   @ViewChild('services') services: ElementRef;
   @ViewChild('questions') questions: ElementRef;
+  @ViewChild('reviews') reviews: ElementRef;
 
   @HostListener('window:scroll')
   onScrollEvent() {

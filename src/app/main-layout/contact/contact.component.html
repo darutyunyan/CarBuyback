@@ -5,19 +5,51 @@
             <div class="col-md-6 col-lg-4">
                 <h2><span class="badge badge-primary text-wrapy">ТЕЛЕФОН И ПОЧТА</span></h2>
                 <p class="lead mt-4">
-                    <a href="tel:+78005557988"><i class="fa fa-mobile" aria-hidden="true"></i> 8 800 555 79 88</a>
+                    <a href="tel:+79383000735"><i class="fa fa-mobile" aria-hidden="true"></i> 8 938 300 07 35</a>
+                </p>
+                <p class="lead mt-4">
+                    <a href="tel:+79280116020"><i class="fa fa-mobile" aria-hidden="true"></i> 8 928 011 60 20</a>
                 </p>
                 <p class="lead">
-                    <a href="mailto:sale@autovikuprus.ru"><i class="fa fa-envelope-o" aria-hidden="true"></i> sale@autovikuprus.ru</a>
+                    <a href="mailto:sale@autovikuprus.ru"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        sale@autovikuprus.ru</a>
+                </p>
+                <h2><span class="badge badge-primary text-wrapy">СОЦИАЛЬНЫЕ СЕТИ</span></h2>
+                <p class="social mt-4">
+                    <a href="https://instagram.com/autodealer_sk" class="fa fa-instagram"
+                        target="_blank"></a>
+                    <a href="https://wa.me/79383000735" class="fa fa-whatsapp" target="_blank"></a>
+                    <a href="tg://resolve?domain=autovikuprus" class="fa fa-telegram"></a>
                 </p>
             </div>
             <div class="col-md-6 col-lg-8">
-                <h2><span class="badge badge-primary text-wrapy">СОЦИАЛЬНЫЕ СЕТИ</span></h2>
-                <div class="social mt-4">
-                    <a href="https://instagram.com/autovikuprus.ru?igshid=1ijtabxir4uxs" class="fa fa-instagram" target="_blank"></a>
-                    <a href="https://wa.me/79383000735" class="fa fa-whatsapp" target="_blank"></a>
-                    <a href="tg://resolve?domain=autovikuprus" class="fa fa-telegram"></a>
-                </div>
+                <h2><span class="badge badge-primary text-wrapy">ЗАДАТЬ ВОПРОС</span></h2>
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Ваше имя" type="text" formControlName="name">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Ваш телефон" type="text"
+                                    formControlName="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Ваша почта" type="text"
+                                    formControlName="email">
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="form-group">
+                                <textarea id="message" class="form-control resize-none" placeholder="Сообщение"
+                                    type="text" formControlName="message"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary pull-right">ОТПРАВИТЬ
+                        <i *ngIf="isShowLoader" class="fa fa-circle-o-notch fa-spin fa-fw font-size-20"></i></button>
+                </form>
             </div>
         </div>
     </header>

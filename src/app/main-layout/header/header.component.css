@@ -53,10 +53,6 @@
     font-size: 20px;
 }
 
-.form-control.ng-invalid.ng-touched{
-    border: 2px solid red;
-}
-
 .fa.fa-check-square-o {
     color: #007bff;
 }

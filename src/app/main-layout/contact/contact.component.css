@@ -7,6 +7,10 @@
     font-size: 30px;
 }
 
+.font-size-20 {
+    font-size: 20px;
+}
+
 a  {
 color: #343a40;
 }
@@ -15,3 +19,8 @@ a:hover {
     color: #007bff;
     text-decoration: none;
 }
+
+textarea {
+    height: 147px;
+    resize: none;
+  }

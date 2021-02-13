@@ -27,6 +27,10 @@ ul{
     font-size: 15px;
 }
 
+.form-control.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+
 /* Overrid bootstrap */
 
 .jumbotron {

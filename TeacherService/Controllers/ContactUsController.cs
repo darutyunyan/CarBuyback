@@ -6,33 +6,51 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TeacherService.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class ContactUsController : BaseController
-    {
-        public ContactUsController(IMailService mailService)
-        {
-            _mailServ = mailService;
-        }
+	[ApiController]
+	[Route("[controller]")]
+	public class ContactUsController : BaseController
+	{
+		public ContactUsController(IMailService mailService)
+		{
+			_mailServ = mailService;
+		}
 
-        [Route("Feedback")]
-        [HttpPost]
-        public async Task<Response> Feedback(FeedbackRequest request)
-        {
-            Response response = new Response();
+		[Route("Feedback")]
+		[HttpPost]
+		public async Task<Response> Feedback(FeedbackRequest request)
+		{
+			Response response = new Response();
 
-            try
-            {
-                await _mailServ.SendEmail(request);
-            }
-            catch (Exception ex)
-            {
-                SetResponse(response, ex);
-            }
+			try
+			{
+				await _mailServ.SendEmail(request);
+			}
+			catch (Exception ex)
+			{
+				SetResponse(response, ex);
+			}
 
-            return response;
-        }
+			return response;
+		}
 
-        private readonly IMailService _mailServ = null;
-    }
+		[Route("ShortFeedback")]
+		[HttpPost]
+		public async Task<Response> ShortFeedback(ShortFeedbackRequest request)
+		{
+			Response response = new Response();
+
+			try
+			{
+				await _mailServ.SendShortEmail(request);
+			}
+			catch (Exception ex)
+			{
+				SetResponse(response, ex);
+			}
+
+			return response;
+		}
+
+		private readonly IMailService _mailServ = null;
+	}
 }
