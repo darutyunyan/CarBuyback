@@ -17,8 +17,8 @@
                 </div>
             </div>
             <div class="col-xl-3 col-lg-5 col-md-6 col-sm-8 col-xs-12 mb-4 mt-4">
-                <div class="card text-white bg-primary">
-                    <div class="card-body">
+                <div class="card border-primary">
+                    <div class="card-body text-primary">
                         <h5 class="card-title">Оставьте заявку и наш сотрудник свяжется с Вами</h5>
                         <form [formGroup]="form" (ngSubmit)="submit()">
                             <div class="form-group">
@@ -42,9 +42,12 @@
                                     <option value="Михайловск">Михайловск</option>
                                     <option value="Невинномысск">Невинномысск</option>
                                     <option value="Новочеркасск">Новочеркасск</option>
+                                    <option value="Орёл">Орёл</option>
                                     <option value="Ростов-на-Дону">Ростов-на-Дону</option>
+                                    <option value="Рязань">Рязань</option>
                                     <option value="Ставрополь">Ставрополь</option>
                                     <option value="Тамбов">Тамбов</option>
+                                    <option value="Тула">Тула</option>
                                     <option value="Шахты">Шахты</option>
                                 </select>
                             </div>
@@ -68,7 +71,7 @@
                                 <textarea id="message" class="form-control resize-none" placeholder="Сообщение" rows="3"
                                     type="text" formControlName="message"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-light btn-block btn-lg">ОТПРАВИТЬ ЗАЯВКУ
+                            <button type="submit" class="btn btn-outline-primary btn-block btn-lg">ОТПРАВИТЬ ЗАЯВКУ
                                 <i *ngIf="!isShowLoader" class="fa fa-paper-plane font-size-25" aria-hidden="true"></i>
                                 <i *ngIf="isShowLoader"
                                     class="fa fa-circle-o-notch fa-spin fa-fw font-size-20"></i></button>

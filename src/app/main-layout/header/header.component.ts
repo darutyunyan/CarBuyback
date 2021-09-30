@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
     this.form = new FormGroup({
       name: new FormControl(null, [Validators.required]),
       phone: new FormControl(null, [Validators.required, Validators.pattern('^[0-9]*$')]),
-      city: new FormControl('Ставрополь', [Validators.required]),
+      city: new FormControl('Воронеж', [Validators.required]),
       carModel: new FormControl(null),
       model: new FormControl(null),
       year: new FormControl(null),
